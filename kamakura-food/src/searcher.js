@@ -1,12 +1,13 @@
 //DEBE buscar los productos por los filtros
 
 export function filterProducts(products, category, renderFilters) { 
-    const filteredProduct = category === 'todos'
+    let filteredProduct = category === 'todos'
         ? products
         : products.filter(product => product.category === category);
     
     return filteredProduct.map(renderFilters).join('');
 }
+
 
 /*
 import {getFullProducts} from "./menu.js"
