@@ -1,6 +1,9 @@
 import { products } from '../assets/data/data.js';
 import { filterProducts } from './searcher.js';
 
+import { addProductToCart } from './cart.js';
+
+
 //DEBE imprimir en pantalla la información de filtros.
 
 const filterContainer = document.getElementById('filters');
@@ -45,7 +48,23 @@ function getFullProducts(item) {
         </div>
     `;
 }
+// eventos para el botón de añadir del index
+function setupAddButtons() {
+    const addButtons = document.querySelectorAll('.add-button');
+    addButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            // obtenemos la información del producto (título, descripción, precio)
+            const productContainer = event.target.closest('.product-container');
+            const title = productContainer.querySelector('h3').innerText;
+            const description = productContainer.querySelector('p').innerText;
+            const price = parseFloat(productContainer.querySelector('.price-container h5').innerText.split('€')[0]);
 
+            // llamamos a la funcion añadir del carrito  (función de cart.js)
+            addProductToCart(title, description, price);
+        });
+    });
+}
 // Llamadas para que se muestre todo (Tal vez deberíamos ir planteándonos eso de ir cambiando a events.js)
 getFilters();
 productContainer.innerHTML = filterProducts(products, 'todos', getFullProducts); // Lo he tenido que cambiar para que funcione, si os fijais se reemplaza el 'render' por la función que queremos
+setupAddButtons(); 
