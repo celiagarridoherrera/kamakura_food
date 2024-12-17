@@ -8,7 +8,7 @@ function init() {
     let filterContainer = document.getElementById('filters');
     let productContainer = document.getElementById('products');
 
-    // MOSTRAR FILTROS Y PRODUCTOS
+    //  MOSTRAR FILTROS Y PRODUCTOS
     getFilters(filterContainer);
 
     productContainer.innerHTML = filterProducts(products, 'todos', getFullProducts);
