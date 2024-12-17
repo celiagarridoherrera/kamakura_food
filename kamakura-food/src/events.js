@@ -47,7 +47,7 @@ function handleAddToCart(event) {
     const price = productElement.querySelector('h5').textContent;
 
     if (isProductInCart(title)) {
-        alert(`${title} ya está en el carrito.Puedes añadir más unidades desde el carrito.`);
+        alert(`${title} ya está en el carrito. Puedes añadir más unidades desde el carrito.`);
     } else {
         addProductToCart(title, price);
     }

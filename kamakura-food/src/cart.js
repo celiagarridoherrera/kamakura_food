@@ -17,8 +17,6 @@ function addCartStyle() {
           cartContainer.classList.toggle('open');
   });
 
-
-/* AÑADIR CARRITO JOSE
 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
 let cartProducts = document.getElementById('cart-products');
 let totalElement = document.getElementById('cart-total');
@@ -104,5 +102,3 @@ export function restoreCart() {
     });
     updateTotal();
 }
-
-*/
