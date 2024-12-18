@@ -1,7 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
     let receiptContainer = document.getElementById('receipt-container');
     let receiptProduct = document.getElementById('receipt-product');
     let receiptTotal = document.getElementById('receipt-total');
@@ -10,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let closeReceiptButton = document.getElementById('close-receipt');
 
     function createReceipt() {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
         if (Object.keys(cartItems).length === 0) {
             alert("El carrito está vacío. Agrega productos antes de ver el recibo.");
             return;
@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     proceedPayButton.addEventListener('click', createReceipt);
     payButton.addEventListener('click', () => {
         alert('¡Pedido realizado con éxito, gracias por comprar en Kamakura Food!');
-        localStorage.removeItem('cartItems');
-        location.reload();
+        localStorage.removeItem('cartItems'); // Vaciar el carrito
+        location.reload(); // Recargar la página
     });
     closeReceiptButton.addEventListener('click', () => {
         receiptContainer.style.display = 'none';
