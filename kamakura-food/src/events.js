@@ -4,10 +4,16 @@ import { products } from '../assets/data/data.js';
 import { getFilters, getFullProducts } from './menu.js';
 import { filterProducts } from './searcher.js';
 import { addProductToCart, isProductInCart, restoreCart } from './cart.js';
+import { createReceipt, handlePay, handleCloseReceipt } from './receipt.js';
 
 function init() {
     const filterContainer = document.getElementById('filters');
     const productContainer = document.getElementById('products');
+    const cartButton = document.getElementById('cart');
+    const cartContainer = document.getElementById('cart-container');
+    const proceedPayButton = document.getElementById('proceedPay-button');
+    const payButton = document.getElementById('pay-button');
+    const closeReceiptButton = document.getElementById('close-receipt');
 
     // VER FILTROS
     getFilters(filterContainer);
@@ -29,6 +35,20 @@ function init() {
             handleAddToCart(event);
         }
     });
+
+    // TOGGLE CART
+    cartButton.addEventListener('click', () => {
+        cartContainer.classList.toggle('open');
+    });
+
+    // PROCEED TO PAY
+    proceedPayButton.addEventListener('click', createReceipt);
+
+    // PAY BUTTON
+    payButton.addEventListener('click', handlePay);
+
+    // CLOSE RECEIPT
+    closeReceiptButton.addEventListener('click', handleCloseReceipt);
 
     restoreCart();
 }
@@ -52,5 +72,11 @@ function handleAddToCart(event) {
         addProductToCart(title, price);
     }
 }
+
+export {
+    init,
+    renderProducts,
+    handleAddToCart
+};
 
 init();
