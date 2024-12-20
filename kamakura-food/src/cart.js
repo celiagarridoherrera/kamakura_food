@@ -1,3 +1,5 @@
+import { products } from "../assets/data/data.js";
+
 //DEBE contener las funcionalidades del carrito de compras.
 
 function addCartStyle() {
@@ -16,6 +18,8 @@ function addCartStyle() {
   cartButton.addEventListener('click',() => {
           cartContainer.classList.toggle('open');
   });
+
+
 
 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
 let cartProducts = document.getElementById('cart-products');
@@ -41,13 +45,16 @@ function createCartItem(title, price, quantity) {
     let cartItem = document.createElement('div');
     cartItem.classList.add('cart-container');
 
+    let subtotal = parseFloat(price) * quantity; //Subtotal
+
+
     cartItem.innerHTML = `
         <button class="close-button">
             <img src="./assets/img/close.svg" alt="close">
         </button>
         <div class="text-container">
             <h3>${title}</h3>
-            <h5>${price}</h5>
+            <h5>${subtotal.toFixed(2)}</h5>
         </div>
         <div class="quantity-container">
             <button class="increase">+</button>
@@ -67,6 +74,11 @@ function createCartItem(title, price, quantity) {
     cartItem.querySelector('.increase').addEventListener('click', () => {
         cartItems[title].quantity++;
         cartItem.querySelector('.quantity').textContent = cartItems[title].quantity;
+
+        //Subtotal
+        subtotal = parseFloat(price) * cartItems[title].quantity;
+        cartItem.querySelector('.text-container h5').textContent = `${subtotal.toFixed(2)}`;
+
         updateTotal();
     });
 
@@ -74,6 +86,11 @@ function createCartItem(title, price, quantity) {
         if (cartItems[title].quantity > 1) {
             cartItems[title].quantity--;
             cartItem.querySelector('.quantity').textContent = cartItems[title].quantity;
+
+            //Subtotal
+            subtotal = parseFloat(price) * cartItems[title].quantity;
+            cartItem.querySelector('.text-container h5').textContent = `${subtotal.toFixed(2)}`;
+
             updateTotal();
         }
     });
@@ -102,3 +119,4 @@ export function restoreCart() {
     });
     updateTotal();
 }
+
