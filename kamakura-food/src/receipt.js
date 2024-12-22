@@ -44,14 +44,14 @@ function createReceipt() {
 
 function handlePay() {
     alert('¡Pedido realizado con éxito, gracias por comprar en Kamakura Food!');
-    localStorage.removeItem('cartItems'); // Vaciar el carrito
-    location.reload(); // Recargar la página
+    localStorage.removeItem('cartItems');
+    location.reload();
 }
 
 function handleCloseReceipt() {
     const cartContainer = document.getElementById('cart-container');
-    cartContainer.style.display = 'block'; // Mostrar carrito nuevamente si es necesario
-    receiptContainer.style.display = 'none'; // Ocultar recibo
+    cartContainer.style.display = 'block';
+    receiptContainer.style.display = 'none';
 }
 export {
     createReceipt,

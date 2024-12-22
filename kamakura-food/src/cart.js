@@ -1,7 +1,5 @@
 import { products } from "../assets/data/data.js";
 
-//DEBE contener las funcionalidades del carrito de compras.
-
 function addCartStyle() {
     let styleCart = document.createElement('style');
     styleCart.textContent = ` 
@@ -10,13 +8,14 @@ function addCartStyle() {
     }`;
     document.head.appendChild(styleCart);
 }
+
 addCartStyle();
 
 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
 let cartProducts = document.getElementById('cart-products');
 let totalElement = document.getElementById('cart-total');
 
-// TOTAL
+
 function updateTotal() {
     let total = 0;
     Object.values(cartItems).forEach(item => {
@@ -26,17 +25,17 @@ function updateTotal() {
     saveCartToLocalStorage();
 }
 
-// localStorage
+
 function saveCartToLocalStorage() {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
 
-// CREAR PLATO EN EL CART
+
 function createCartItem(title, price, quantity) {
     let cartItem = document.createElement('div');
     cartItem.classList.add('cart-container');
 
-    let subtotal = parseFloat(price) * quantity; //Subtotal
+    let subtotal = parseFloat(price) * quantity;
 
     cartItem.innerHTML = `
         <button class="close-button">
@@ -53,19 +52,19 @@ function createCartItem(title, price, quantity) {
         </div>
     `;
 
-    // ELIMINAR PRODUCTO
+  
     cartItem.querySelector('.close-button').addEventListener('click', () => {
         delete cartItems[title];
         cartItem.remove();
         updateTotal();
     });
 
-    // SUMAR Y RESTAR PLATOS
+ 
     cartItem.querySelector('.increase').addEventListener('click', () => {
         cartItems[title].quantity++;
         cartItem.querySelector('.quantity').textContent = cartItems[title].quantity;
 
-        //Subtotal
+        
         subtotal = parseFloat(price) * cartItems[title].quantity;
         cartItem.querySelector('.text-container h5').textContent = `${subtotal.toFixed(2)}`;
 
@@ -77,7 +76,7 @@ function createCartItem(title, price, quantity) {
             cartItems[title].quantity--;
             cartItem.querySelector('.quantity').textContent = cartItems[title].quantity;
 
-            //Subtotal
+            
             subtotal = parseFloat(price) * cartItems[title].quantity;
             cartItem.querySelector('.text-container h5').textContent = `${subtotal.toFixed(2)}`;
 
@@ -88,7 +87,7 @@ function createCartItem(title, price, quantity) {
     return cartItem;
 }
 
-// AñAÑADIR PRODUCTO
+
 function addProductToCart(title, price) {
     cartItems[title] = { price, quantity: 1 };
     let cartItem = createCartItem(title, price, 1);
@@ -100,7 +99,7 @@ function isProductInCart(title) {
     return cartItems.hasOwnProperty(title);
 }
 
-// RESTAURAR
+
 function restoreCart() {
     Object.entries(cartItems).forEach(([title, { price, quantity }]) => {
         let cartItem = createCartItem(title, price, quantity);

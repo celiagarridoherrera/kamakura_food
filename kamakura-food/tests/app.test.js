@@ -1,8 +1,5 @@
-
 import { describe, test} from "vitest";
 import { JSDOM } from 'jsdom';
-
-
 
 
 describe("testing DOM", () => {

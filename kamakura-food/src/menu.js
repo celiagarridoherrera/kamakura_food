@@ -1,5 +1,3 @@
-//DEBE imprimir en pantalla la información de filtros.
-
 import { products } from '../assets/data/data.js';
 
 export function getFilters(filterContainer) {
