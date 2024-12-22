@@ -4,7 +4,6 @@ import { getFilters, getFullProducts } from '../src/menu.js';
 import { products } from '../assets/data/data.js';
 
 describe('Test Menu', () => {
-   
         let filterContainer;
     
         /**Configuración inicial del DOM antes de cada prueba
@@ -12,7 +11,7 @@ describe('Test Menu', () => {
          *1- Agrupar las pruebas relacionadas el beforeEach se va a ejecutar antes de cada prueba para configurar el DOM simulado 
          * y crea un contenedor vacío (<div id="filters"></div>) donde se probarán las funciones.
          **/ 
-   
+
         beforeEach(() => {
             document.body.innerHTML = `<div id="filters"></div>`;
             filterContainer = document.getElementById('filters');
@@ -20,7 +19,7 @@ describe('Test Menu', () => {
     
         /*Test del Menu*/
     
-         /**Paso a Paso:
+        /**Paso a Paso:
         getFilters(filterContainer): 
         Llama a la función getFilters pasando el contenedor de filtros.
         Genera correctamente botones  para cada categoría de los productos.   
