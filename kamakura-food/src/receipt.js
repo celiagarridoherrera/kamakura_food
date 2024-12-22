@@ -10,11 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function createReceipt() {
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || {};
+    let cartProducts = document.getElementById('cart-products');
+
     if (Object.keys(cartItems).length === 0) {
         alert("El carrito está vacío. Agrega productos antes de ver el recibo.");
         return;
     }
 
+    cartProducts.innerHTML = ''; 
     receiptProduct.innerHTML = '';
 
     let total = 0;
@@ -46,9 +49,10 @@ function handlePay() {
 }
 
 function handleCloseReceipt() {
-    receiptContainer.style.display = 'none';
+    const cartContainer = document.getElementById('cart-container');
+    cartContainer.style.display = 'block'; // Mostrar carrito nuevamente si es necesario
+    receiptContainer.style.display = 'none'; // Ocultar recibo
 }
-
 export {
     createReceipt,
     handlePay,
