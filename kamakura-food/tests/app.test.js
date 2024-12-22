@@ -1,5 +1,9 @@
-import { describe, test } from "vitest";
+
+import { describe, test} from "vitest";
 import { JSDOM } from 'jsdom';
+
+
+
 
 describe("testing DOM", () => {
     test("Testing 'inicio' is the first link on the navbar", async () => {
@@ -10,3 +14,5 @@ describe("testing DOM", () => {
         expect(nav.innerHTML).toBe("Inicio");
     })
 })
+
+

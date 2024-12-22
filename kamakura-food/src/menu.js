@@ -22,3 +22,4 @@ export function getFullProducts(item) {
         </div>
     `;
 }
+
