@@ -1,5 +1,14 @@
 # Proyecto: Kamakura Food
 
+## Table of Contents
+1. [Responsables](#responsables)
+2. [Objetivos del proyecto](#objetivos-del-proyecto)
+3. [MVP](#MVP)
+4. [Repositorio](#repositorio)
+5. [Instrucciones](#instrucciones-de-uso-del-repositorio)
+6. [Uso Kamakura Food web (video)](#uso-kamakura-food-web)
+7. [Métodos de trabajo](#métodos-de-trabajo)
+
 ## **Responsables:**
 
 - **Equipo: Los Ramenáticos**
@@ -35,6 +44,8 @@ Lista de tecnologías utilizadas en el proyecto:
 - HTML/CSS/JavaScript: Base del proyecto.
 - ESModules: Separación de lógica y funcionalidades en archivos modulares.
 - Vitest y jsdom: Testing unitario para funcionalidades del DOM.
+- Trello: Backlog
+- Miró: Diagramas de flujo
 
 ## **Repositorio**
 
@@ -94,19 +105,26 @@ Abre el archivo index.html en tu navegador o utiliza una extensión como Live Se
 Usa el siguiente comando para ejecutar las pruebas automatizadas con Vitest:
 `npm test`
 
-## **WorkFlow**
+## **Uso Kamakura Food (web)**
+[Demo video](/documents/Kamakura%20Food%20demo%20video.mp4)
 
+# **Métodos de trabajo**
+
+## **WorkFlow**
+[Enlace a Miró del WorkFlow](https://miro.com/welcomeonboard/WjlaaUtMay9yS2UyeWdncTlwQUt3VFNJNTZ0YVR6Q2RRMUZCdjdjUVV1ZWFyNG1SakJRRkNJTHJTWmc1VkhQQTRJTnVlWE80cHgxSmVIV2oyNjBwRmZxRUt0ZTdkYmlkajMvTHIrSE5NM3pQU3VVbWJmSEg1c2dHcEkxTThyT28hZQ==?share_link_id=461635771190) [WorkFlow](/documents/WorkFlow.jpg)
 
 ## **Informe de las tareas**
 [Enlace a Trello informe de las tareas del equipo](https://trello.com/invite/b/67584d91c232fe2fa8053c84/ATTIe056da48199a714d54f5a352d24cf0b7A27684CF/kamakura-food)
 
 ## **UserFlow**
-
+[Enlace a Miró "kamakura UserFlow"](https://miro.com/welcomeonboard/aWpaMjVMSnhjMDE1M084NGhYV0gxUFNodXhwWUxnUk4xSEs4bTY2QVF6SjMxMjhCV3FRemxBdXF3UEpveTlPeHpUdWtqTlhmNGR6aXR5QzBLK2tZaGZxRUt0ZTdkYmlkajMvTHIrSE5NM3pQU3VVbWJmSEg1c2dHcEkxTThyT28hZQ==?share_link_id=417388823871)
+[UserFlow](/documents/UserFlow.jpg)
 
 ## **Historias de usuario**
 
 [Enlace a Miró "kamakura User Stories"](https://miro.com/app/board/uXjVL2tS62A=/?share_link_id=149104589538)
 [UserStories](/documents/kamakura%20User%20Stories.jpg)
+
 ## **Test Gherkin**
 
 ![Test Gherkin](/documents/test-gherkin.md)
