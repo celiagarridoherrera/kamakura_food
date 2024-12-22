@@ -6,7 +6,9 @@
 3. [MVP](#MVP)
 4. [Repositorio](#repositorio)
 5. [Instrucciones](#instrucciones-de-uso-del-repositorio)
-6. [Métodos de trabajo](#métodos-de-trabajo)
+6. [Uso Kamakura Food web (video)](#uso-kamakura-food-web)
+7. [Métodos de trabajo](#métodos-de-trabajo)
+
 ## **Responsables:**
 
 - **Equipo: Los Ramenáticos**
@@ -102,6 +104,9 @@ Abre el archivo index.html en tu navegador o utiliza una extensión como Live Se
 6. Correr los tests
 Usa el siguiente comando para ejecutar las pruebas automatizadas con Vitest:
 `npm test`
+
+## **Uso Kamakura Food (web)**
+[Demo video](/documents/Kamakura%20Food%20demo%20video.mp4)
 
 # **Métodos de trabajo**
 
