@@ -1,8 +1,8 @@
 import { describe, test } from "vitest";
 import { JSDOM } from 'jsdom';
 
-describe('Testing abrir y cerrar carrito de compras', () => {
-  test('test abrir carrito cuando click en icono carrito', () => {
+describe('Testing abrir y cerrar carrito de compras'), () => {
+  test('test abrir carrito cuando click en icono carrito'), () => {
 
   }
 
