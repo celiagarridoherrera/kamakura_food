@@ -1,5 +1,12 @@
 # Proyecto: Kamakura Food
 
+## Table of Contents
+1. [Responsables](#responsables)
+2. [Objetivos del proyecto](#objetivos-del-proyecto)
+3. [MVP](#MVP)
+4. [Repositorio](#repositorio)
+5. [Instrucciones](#instrucciones-de-uso-del-repositorio)
+6. [Métodos de trabajo](#métodos-de-trabajo)
 ## **Responsables:**
 
 - **Equipo: Los Ramenáticos**
@@ -95,6 +102,8 @@ Abre el archivo index.html en tu navegador o utiliza una extensión como Live Se
 6. Correr los tests
 Usa el siguiente comando para ejecutar las pruebas automatizadas con Vitest:
 `npm test`
+
+# **Métodos de trabajo**
 
 ## **WorkFlow**
 [Enlace a Miró del WorkFlow](https://miro.com/welcomeonboard/WjlaaUtMay9yS2UyeWdncTlwQUt3VFNJNTZ0YVR6Q2RRMUZCdjdjUVV1ZWFyNG1SakJRRkNJTHJTWmc1VkhQQTRJTnVlWE80cHgxSmVIV2oyNjBwRmZxRUt0ZTdkYmlkajMvTHIrSE5NM3pQU3VVbWJmSEg1c2dHcEkxTThyT28hZQ==?share_link_id=461635771190) [WorkFlow](/documents/WorkFlow.jpg)
